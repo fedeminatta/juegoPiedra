@@ -81,11 +81,17 @@
 }
 
 body {
+  padding: 25px 0 65px 0;
   font-family: sans-serif;
-  padding: 80px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.692)), to(rgba(0, 0, 0, 0.616))), url(./img/bg.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.616)), url(./img/bg.jpg);
   background-size: cover;
+}
+
+.contenedor {
+  width: 900px;
+  max-width: 95%;
+  margin: auto;
 }
 
 header {
@@ -231,4 +237,21 @@ footer a:hover {
 .mensaje {
   -webkit-animation: move 0.2s;
           animation: move 0.2s;
+}
+
+@media screen and (max-width: 380px) {
+  .botones {
+    padding: 0;
+    gap: 12px;
+  }
+  .botones button {
+    padding: 0;
+  }
+  .botones button img {
+    width: 50px;
+  }
+  #mensaje div {
+    font-size: 16px;
+    font-weight: bold;
+  }
 }/*# sourceMappingURL=estilos.css.map */

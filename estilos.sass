@@ -52,10 +52,15 @@
     box-sizing: border-box
 
 body
+    padding: 25px 0 65px 0
     font-family: sans-serif
-    padding: 80px
     background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.616)), url(./img/bg.jpg)
     background-size: cover
+
+.contenedor
+    width: 900px
+    max-width: 95%
+    margin: auto
 
 header
     background-color: #c20000
@@ -149,3 +154,17 @@ footer
 
 .mensaje
     animation: move .2s
+
+@media  screen and (max-width: 380px)
+    .botones
+        padding: 0
+        gap: 12px
+        button
+            padding: 0
+            img
+                width: 50px
+
+    #mensaje
+        div
+            font-size: 16px
+            font-weight: bold
