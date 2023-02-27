@@ -1,5 +1,5 @@
 :root
-    --bg: #a35409
+    --bg: #9609a359
 
 @-webkit-keyframes tiembla
   0%  
@@ -15,17 +15,53 @@
     100%
         transform: translateX(0)
 
+::-webkit-scrollbar
+    width: 10px
+    height: 10px
+
+::-webkit-scrollbar-button
+    width: 0px
+    height: 0px
+
+::-webkit-scrollbar-thumb
+    background: #5c00c2
+    border: 2px solid #1b0123
+    border-radius: 0px
+
+::-webkit-scrollbar-thumb:hover
+    background: #5c00c2
+
+::-webkit-scrollbar-thumb:active
+    background: #5c00c2
+
+::-webkit-scrollbar-track
+    background: #26053d
+    border: 0px none #ffffff
+    border-radius: 48px
+
+::-webkit-scrollbar-track:hover
+    background: #1b051f
+
+::-webkit-scrollbar-track:active
+    background: #333333
+
+::-webkit-scrollbar-corner
+    background: transparent
+
 *
     box-sizing: border-box
 
 body
     background: #030118
     font-family: sans-serif
-    overflow-x: hidden
+    padding: 80px
+    background-image: url(./img/bg.jpg)
+    background-size: cover
 
 header
-    background: #a06410
+    background-color: #5b00c2
     padding: 15px
+    border-bottom: 2px solid #fff
     h1
         color: #fff
         font-size: 1.4rem
@@ -34,7 +70,7 @@ header
 .botones
     padding: 20px
     border-radius: 0 0 8px 8px
-    background: #fce0b9
+    background: #5b00c22d
     display: flex
     flex-flow: row wrap
     justify-content: center
@@ -46,7 +82,7 @@ header
         border-radius: 4px
         border: none
         outline: none
-        background: #a06410
+        background: none
         color: #fce0b9
         transition: background .2s
         &:hover
@@ -56,13 +92,14 @@ header
         img
             width: 100px
             transition: transform .2s
-
+            filter: drop-shadow(0 2px 5px rgb(124, 15, 175))
 #mensaje
     margin-top: 20px
     background: var(--bg)
     color: #ffffff
     padding: 20px
-    min-height: 350px
+    height: 350px
+    overflow-y: auto
     border-radius: 3px
     display: flex
     justify-content: flex-start
@@ -77,26 +114,33 @@ header
         font-size: 22px
         transition: background .2s
         &:hover
-            background: #fce0b9
+            background: #49006d
+            color: #fff
             cursor: pointer
 footer
     color: #ffffff
-    background: #00000044
-    border-top: 2px solid #000
+    background: #2c074b
     position: fixed
-    display: block
-    width: 100%
+    display: flex
+    justify-content: center
+    flex-flow: row wrap
+    gap: 5px
+    width: 100vw
     text-align: center
     padding: 15px
     bottom: 0
+    left: 0
+    z-index: 1000
     a
         text-decoration: none
-        color: #0e0809
+        color: #fff
+        font-style: italic
         display: inline-block
         transition: transform .2s ease
         &:hover
-            transform: translateY(-2px)
+            transform: translateX(2px)
             cursor: pointer
+            text-decoration: underline
 
 .mensaje
     animation: move .2s
