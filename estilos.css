@@ -103,6 +103,7 @@ header h1 {
   color: #fff;
   font-size: 1.4rem;
   text-align: center;
+  text-shadow: 0 0 8px #fff;
 }
 header p {
   color: #fff;
@@ -223,18 +224,24 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 1000;
+  font-size: 1.2rem;
 }
 footer a {
   text-decoration: none;
-  color: #fff;
+  color: #2c074b;
   font-style: italic;
   display: inline-block;
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-text-stroke: #ffffff 1px;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 3 px;
 }
 footer a:hover {
+  text-shadow: 0 0 8px #fff;
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
   cursor: pointer;
