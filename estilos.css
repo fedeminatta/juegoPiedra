@@ -1,36 +1,12 @@
 :root {
   --bg: #9609a359;
 }
-
-@-webkit-keyframes tiembla {
-  0% {
-    -webkit-transform: rotateZ(-2deg);
-  }
-  50% {
-    -webkit-transform: rotateZ(0deg) scale(1.02);
-  }
-  100% {
-    -webkit-transform: rotateZ(2deg);
-  }
-}
-@-webkit-keyframes move {
-  0% {
-    -webkit-transform: translateX(-12px);
-            transform: translateX(-12px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
 @keyframes move {
   0% {
-    -webkit-transform: translateX(-12px);
-            transform: translateX(-12px);
+    transform: translateX(-12px);
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 ::-webkit-scrollbar {
@@ -76,14 +52,12 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   padding: 25px 0 65px 0;
   font-family: sans-serif;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.692)), to(rgba(0, 0, 0, 0.616))), url(./img/bg.webp);
   background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.616)), url(./img/bg.webp);
   background-size: cover;
 }
@@ -118,28 +92,15 @@ header p {
   margin-bottom: 50px;
   border-radius: 0 0 8px 8px;
   background: rgba(91, 0, 194, 0.1764705882);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   min-height: 200px;
-  -webkit-transition: -webkit-box-shadow 0.2s;
-  transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 .botones:hover {
-  -webkit-box-shadow: 0px 0px 80px 14px rgba(255, 46, 46, 0.9);
   box-shadow: 0px 0px 32px 14px rgba(255, 46, 46, 0.9);
 }
 .botones button {
@@ -149,22 +110,16 @@ header p {
   outline: none;
   background: none;
   color: #fce0b9;
-  -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
 .botones button:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   cursor: pointer;
 }
 .botones button img {
   width: 100px;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-  -webkit-filter: drop-shadow(0 2px 5px rgb(255, 0, 0));
-          filter: drop-shadow(0 2px 5px rgb(255, 0, 0));
+  filter: drop-shadow(0 2px 5px rgb(255, 0, 0));
 }
 
 #mensaje {
@@ -175,16 +130,9 @@ header p {
   height: 350px;
   overflow-y: auto;
   border-radius: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: column;
   gap: 20px;
 }
 #mensaje div {
@@ -194,7 +142,6 @@ header p {
   border-radius: 8px;
   line-height: 33px;
   font-size: 22px;
-  -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
 #mensaje div:hover {
@@ -207,16 +154,9 @@ footer {
   color: #ffffff;
   background: #2c074b;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  justify-content: center;
+  flex-flow: row wrap;
   gap: 5px;
   width: 100vw;
   text-align: center;
@@ -231,10 +171,7 @@ footer a {
   color: #2c074b;
   font-style: italic;
   display: inline-block;
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   -webkit-text-stroke: #ffffff 1px;
   text-decoration: underline;
   text-decoration-style: wavy;
@@ -242,15 +179,13 @@ footer a {
 }
 footer a:hover {
   text-shadow: 0 0 8px #fff;
-  -webkit-transform: translateX(2px);
-          transform: translateX(2px);
+  transform: translateX(2px);
   cursor: pointer;
   text-decoration: underline;
 }
 
 .mensaje {
-  -webkit-animation: move 0.2s;
-          animation: move 0.2s;
+  animation: move 0.2s;
 }
 
 @media screen and (max-width: 380px) {
